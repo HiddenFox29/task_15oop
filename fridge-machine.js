@@ -31,7 +31,7 @@ function FrigeMachine(power) { // класс наследник от Machine
 
 
 
-        this.takeFood = function(food){
+        this.takeFood = function(food){ // забераем еду
             if(this._enabled){
                 let indexFood = foodList.indexOf(food);
                 if(foodList[indexFood] === food) {
