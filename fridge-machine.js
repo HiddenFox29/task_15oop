@@ -9,7 +9,7 @@ function FrigeMachine(power) { // класс наследник от Machine
                 if(food){
                     if(foodList.length < power/100) {
                         foodList.push(food);
-                        return foodList;
+                        return this.getFoodList();
                     } else {
                         throw new Error('ошибка! вы привысили макс количество подуктов в холодильнике');
                     }
@@ -34,7 +34,7 @@ function FrigeMachine(power) { // класс наследник от Machine
                 let indexFood = foodList.indexOf(food);
                 if(foodList[indexFood] === food) {
                     foodList.splice(indexFood, 1);
-                    return foodList;
+                    return this.getFoodList();
                 } else {
                     throw new Error('ошибка! такого продукта в холодильника нет');
                 }
