@@ -35,7 +35,7 @@ function FrigeMachine(power) { // класс наследник от Machine
             if(this._enabled){
                 let indexFood = foodList.indexOf(food);
                 if(foodList[indexFood] === food) {
-                    foodList.splice(indexFood, indexFood);
+                    foodList.splice(indexFood, 1);
                     return foodList;
                 } else {
                     throw new Error('ошибка! такого продукта в холодильника нет');
