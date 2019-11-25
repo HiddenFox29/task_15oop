@@ -6,7 +6,7 @@ function FrigeMachine(power) { // класс наследник от Machine
 
         this.addFood = function(food) { // добавлет еду
             if(this._enabled){
-                if(food != undefined && food != ''){
+                if(food){
                     if(foodList.length < power/100) {
                         foodList.push(food);
                         return foodList;
