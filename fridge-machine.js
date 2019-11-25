@@ -23,13 +23,11 @@ function FrigeMachine(power) { // класс наследник от Machine
 
         this.getFoodList = function() { // список еды
             if(this._enabled){
-                return foodList;
+                return foodList.slice();
             } else {
                 throw new Error('ошибка! нельзя получать список еды из отключенного холодильника')
             }
         };
-
-
 
         this.takeFood = function(food){ // забераем еду
             if(this._enabled){
