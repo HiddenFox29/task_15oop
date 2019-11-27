@@ -2,11 +2,12 @@ function FrigeMachine(power) { // класс наследник от Machine
         Machine.call(this, power); // наследуемся из класса родителя
 
         let self = this;
-        this.__foodList = [];
+        this.__foodList = []; // приватная переменная стиль prototype ('__')
 };
 
-    FrigeMachine.prototype = Object.create(Machine.prototype);
+    FrigeMachine.prototype = Object.create(Machine.prototype); // наследование родителя через протатип
 
+    // создание методов класса с помощью протоатипов
     FrigeMachine.prototype.addFood = function (food) { // добавлет еду
         if(this.__enabled){
             if(food){
