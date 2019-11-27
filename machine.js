@@ -1,15 +1,14 @@
 
 function Machine(power) { // родительский класс
-    this._power = power; // приватный метод класса
-    this._enabled = false;
-
-    this.enable = function() { // публичный метод
-        console.log('Machine enabled');
-        this._enabled = true;
-    };
-
-    this.disable = function() {
-        console.log('Machine disabled');
-        this._enabled = false;
-    };
+    this.__power = power; // приватный метод класса
+    this.__enabled = false;
 }
+    Machine.prototype.enable = function () { // публичный метод
+        console.log('Machine enabled');
+        this.__enabled = true;
+    };
+
+    Machine.prototype.disable = function () {
+        console.log('Machine disabled');
+        this.__enabled = false;
+    };
