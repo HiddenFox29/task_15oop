@@ -1,7 +1,6 @@
 function FrigeMachine(power) { // класс наследник от Machine
         Machine.call(this, power); // наследуемся из класса родителя
 
-        let self = this;
         this.__foodList = []; // приватная переменная стиль prototype ('__')
 };
 
