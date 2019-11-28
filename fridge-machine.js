@@ -11,7 +11,7 @@ function FrigeMachine(power) { // класс наследник от Machine
     FrigeMachine.prototype.addFood = function (food) { // добавлет еду
         if(this.__enabled){
             if(food){
-                if(this.__foodList.length < this.__power/100) {
+                if(this.__foodList.length < this._power/100) {
                     this.__foodList.push(food);
                     return this.getFoodList();
                 } else {
@@ -26,7 +26,7 @@ function FrigeMachine(power) { // класс наследник от Machine
     };
 
     FrigeMachine.prototype.getFoodList = function () { // список еды
-        if(this.__enabled){
+        if(this._enabled){
             return this.__foodList.slice();
         } else {
             throw new Error('ошибка! нельзя получать список еды из отключенного холодильника')
@@ -34,7 +34,7 @@ function FrigeMachine(power) { // класс наследник от Machine
     };
 
     FrigeMachine.prototype.takeFood = function (food) { // забераем еду
-        if(this.__enabled){
+        if(this._enabled){
             let indexFood = this.__foodList.indexOf(food);
             if(this.__foodList[indexFood] === food) {
                 this.__foodList.splice(indexFood, 1);
