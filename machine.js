@@ -12,7 +12,6 @@ class Machine {
         console.log('Machine disabled');
         this._enabled = false;
     }
-}
-;
+};
 
 

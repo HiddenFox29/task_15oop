@@ -9,13 +9,13 @@ frige.addFood('молоко');
 // frige.addFood('чай');
 
 
-let foodInFrige = frige.getFoodList();
+let foodInFrige = frige.foodList;
 
 // console.log(foodInFrige); // -> ['колбаса', 'сыр', 'молоко']
 
 foodInFrige.push('мясо'); // полученный массив можно менять -> ['колбаса', 'сыр', 'молоко', 'мясо']
 
-console.log(frige.getFoodList()); // но в холодильнике ничего не должно изменится -> ['колбаса', 'сыр', 'молоко']
+console.log(frige.foodList); // но в холодильнике ничего не должно изменится -> ['колбаса', 'сыр', 'молоко']
 
 console.log(foodInFrige);
 /**
@@ -28,11 +28,11 @@ console.log(foodInFrige);
 
 frige.takeFood('сыр'); // забирает продукт из холодильника
 
-console.log(frige.getFoodList()); // ['колбаса', 'молоко']
+console.log(frige.foodList); // ['колбаса', 'молоко']
 
 frige.addFood('мясо'); // место освободилось так что теперь можно добавить новый продукт
 
-console.log(frige.getFoodList()); // ['колбаса', 'молоко', 'мясо']
+console.log(frige.foodList); // ['колбаса', 'молоко', 'мясо']
 
 frige.takeFood('сыр'); // ошибка! такого продукта в холодильника нет
 
